@@ -1,0 +1,90 @@
+.letter-card{
+
+    width:700px;
+
+    max-width:90%;
+
+    background:white;
+
+    padding:50px;
+
+    border-radius:25px;
+
+    box-shadow:0 20px 60px rgba(0,0,0,.2);
+
+    text-align:left;
+
+    animation:floatLetter 4s ease-in-out infinite;
+
+}
+
+.letter-card h2{
+
+    text-align:center;
+
+    color:#ff4d6d;
+
+    margin-bottom:30px;
+
+    font-size:35px;
+
+}
+
+.letter-card p{
+
+    line-height:2;
+
+    color:#555;
+
+    font-size:19px;
+
+}
+
+@keyframes floatLetter{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-8px);
+
+    }
+
+}
+#typingText{
+
+    white-space:pre-line;
+
+    line-height:2;
+
+    font-size:19px;
+
+    color:#555;
+
+}
+
+/* Cursor */
+
+#typingText::after{
+
+    content:"|";
+
+    animation:blink .8s infinite;
+
+    color:#ff4d6d;
+
+}
+
+@keyframes blink{
+
+    50%{
+
+        opacity:0;
+
+    }
+
+}

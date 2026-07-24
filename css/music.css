@@ -1,0 +1,49 @@
+.music-btn{
+
+    position:fixed;
+
+    right:30px;
+
+    bottom:30px;
+
+    width:65px;
+
+    height:65px;
+
+    border:none;
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+    font-size:28px;
+
+    background:rgba(255,255,255,.25);
+
+    backdrop-filter:blur(12px);
+
+    color:white;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+
+    transition:.4s;
+
+    z-index:9999;
+
+}
+
+.music-btn:hover{
+
+    transform:scale(1.15) rotate(10deg);
+
+}
+
+@media (max-width:600px){
+    .music-btn{
+        right:16px;
+        bottom:16px;
+        width:48px;
+        height:48px;
+        font-size:20px;
+    }
+}

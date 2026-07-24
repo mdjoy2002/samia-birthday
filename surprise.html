@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surprise — Samia</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/surprise-bg.css">
+    <link rel="stylesheet" href="css/envelope.css">
+    <link rel="stylesheet" href="css/music.css">
+</head>
+
+<body class="surprise-page">
+
+    <div class="bg-hearts">
+
+        <span>❤️</span>
+        <span>💖</span>
+        <span>💕</span>
+        <span>❤️</span>
+        <span>💗</span>
+
+    </div>
+
+    <div class="sparkles">
+
+        <span style="top:10%;left:20%;"></span>
+        <span style="top:30%;left:70%;"></span>
+        <span style="top:50%;left:40%;"></span>
+        <span style="top:80%;left:80%;"></span>
+        <span style="top:60%;left:15%;"></span>
+
+    </div>
+
+    <div class="surprise-card">
+
+        <header style="text-align:center;padding:26px 20px 10px;">
+            <h1>🎉 Surprise</h1>
+            <p>Tap the envelope to open your surprise</p>
+            <a href="index.html" class="btn" style="margin-top:12px;display:inline-block;">Back Home</a>
+        </header>
+
+        <section id="envelopeSection" class="envelope-section" style="display:flex;justify-content:center;padding:40px 20px;">
+
+            <div class="envelope">
+
+                <div class="top"></div>
+
+                <div class="letter-paper">
+
+                    <h2>💌</h2>
+
+                    <p>Open Me</p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+    <!-- Music control -->
+    <button id="musicBtn" class="music-btn">🎵</button>
+    <audio id="bgMusic" loop preload="auto" playsinline>
+        <source src="music/birthday.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="js/music.js"></script>
+    <script src="js/surprise.js"></script>
+    <script src="js/typing.js"></script>
+</body>
+</html>

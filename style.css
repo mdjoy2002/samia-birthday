@@ -1,0 +1,292 @@
+/* ===========================
+   Google Fonts Import
+=========================== */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap');
+
+/* ===========================
+   Global Reset & Base Styles
+=========================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    overflow-x: hidden;
+    padding: 40px 0;
+}
+
+/* ===========================
+   Hero Section & Glass Container
+=========================== */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    color: #4a1320; /* darker, readable on pink gradient */
+    z-index: 10;
+    padding: 50px 60px;
+    max-width: 1000px;
+    width: 90%;
+    margin-bottom: 50px;
+    
+    /* Premium Glassmorphism Effect */
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 30px;
+    box-shadow: 
+        0 20px 50px rgba(0, 0, 0, 0.25),
+        inset 0 0 25px rgba(255, 255, 255, 0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+    box-shadow: 
+        0 30px 60px rgba(0, 0, 0, 0.3),
+        inset 0 0 30px rgba(255, 255, 255, 0.15);
+}
+
+.hero-text {
+    text-align: left;
+}
+
+.container h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 52px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    letter-spacing: 0.5px;
+    color: #3b1220;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.container p {
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin-bottom: 35px;
+    color: #5a2630;
+}
+
+/* ===========================
+   Hero Image & Floating Animation
+=========================== */
+.hero-image img {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 6px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    animation: floatImage 4s ease-in-out infinite;
+}
+
+@keyframes floatImage {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+/* ===========================
+   Interactive Button
+=========================== */
+.btn {
+    display: inline-block;
+    background: #ffffff;
+    color: #ff4d6d;
+    padding: 14px 32px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.btn:hover {
+    background: #ff4d6d;
+    color: #ffffff;
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 15px 30px rgba(255, 77, 109, 0.4);
+}
+
+/* ===========================
+   Love Letter Section Design
+=========================== */
+.letter-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+    padding: 0 20px;
+}
+
+.letter-card {
+    max-width: 800px;
+    width: 90%;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 30px;
+    padding: 50px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.letter-card h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 32px;
+    color: #3b1220;
+    margin-bottom: 30px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.letter-salutation {
+    font-family: "Playfair Display", serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: #5a2630;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.letter-body {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #3e1522; /* darker but still warm for good contrast */
+    text-align: left;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+}
+
+.letter-footer {
+    font-family: "Playfair Display", serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #4a1320;
+    margin-top: 30px;
+    text-align: center;
+}
+
+/* ===========================
+   Floating Hearts & Balloons Background
+=========================== */
+.hearts {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.hearts span {
+    position: absolute;
+    bottom: -80px;
+    animation: floatHeart linear infinite;
+}
+
+/* Individual Element Config */
+.hearts span:nth-child(1)  { left: 5%;  animation-duration: 9s;  font-size: 24px; }
+.hearts span:nth-child(2)  { left: 12%; animation-duration: 11s; font-size: 32px; }
+.hearts span:nth-child(3)  { left: 20%; animation-duration: 8s;  font-size: 26px; }
+.hearts span:nth-child(4)  { left: 30%; animation-duration: 12s; font-size: 34px; }
+.hearts span:nth-child(5)  { left: 40%; animation-duration: 9s;  font-size: 28px; }
+.hearts span:nth-child(6)  { left: 50%; animation-duration: 13s; font-size: 36px; }
+.hearts span:nth-child(7)  { left: 60%; animation-duration: 10s; font-size: 25px; }
+.hearts span:nth-child(8)  { left: 70%; animation-duration: 11s; font-size: 33px; }
+.hearts span:nth-child(9)  { left: 78%; animation-duration: 9s;  font-size: 27px; }
+.hearts span:nth-child(10) { left: 85%; animation-duration: 12s; font-size: 35px; }
+.hearts span:nth-child(11) { left: 92%; animation-duration: 8s;  font-size: 26px; }
+.hearts span:nth-child(12) { left: 97%; animation-duration: 10s; font-size: 31px; }
+
+@keyframes floatHeart {
+    0% {
+        transform: translateY(0) rotate(0deg) scale(1);
+        opacity: 0;
+    }
+    15% {
+        opacity: 0.8;
+    }
+    50% {
+        transform: translateY(-50vh) translateX(15px) rotate(8deg) scale(1.05);
+    }
+    100% {
+        transform: translateY(-110vh) translateX(-15px) rotate(-8deg) scale(1.3);
+        opacity: 0;
+    }
+}
+
+/* ===========================
+   Mobile Responsive Styles
+=========================== */
+@media (max-width: 768px) {
+    body {
+        height: auto;
+        overflow-y: auto;
+    }
+
+    .container {
+        flex-direction: column-reverse;
+        gap: 25px;
+        text-align: center;
+        padding: 30px 20px;
+        width: 92%;
+        margin-top: 20px;
+    }
+
+    .hero-text {
+        text-align: center;
+    }
+
+    .hero-image img {
+        width: 200px;
+        height: 200px;
+        border-width: 4px;
+    }
+
+    .container h1 {
+        font-size: 36px;
+    }
+
+    .container p {
+        font-size: 18px;
+        margin-bottom: 25px;
+    }
+
+    .btn {
+        padding: 12px 28px;
+        font-size: 16px;
+    }
+
+    .letter-card {
+        padding: 30px 20px;
+        width: 92%;
+    }
+
+    .letter-card h2 {
+        font-size: 26px;
+    }
+
+    .letter-body {
+        font-size: 15px;
+    }
+}

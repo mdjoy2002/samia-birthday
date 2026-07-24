@@ -1,0 +1,444 @@
+/* ===========================
+   Google Font
+=========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    background:linear-gradient(135deg,#ff9fb2,#ffd8e5,#fff4f8);
+
+    min-height:100vh;
+
+    overflow-x:hidden;
+
+    position:relative;
+
+}
+
+/* ===========================
+   Floating Blur
+=========================== */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    width:450px;
+
+    height:450px;
+
+    background:#ffffff55;
+
+    border-radius:50%;
+
+    top:-120px;
+
+    left:-120px;
+
+    filter:blur(120px);
+
+    z-index:-1;
+
+}
+
+body::after{
+
+    content:"";
+
+    position:fixed;
+
+    width:350px;
+
+    height:350px;
+
+    background:#ff5c8a55;
+
+    border-radius:50%;
+
+    bottom:-120px;
+
+    right:-120px;
+
+    filter:blur(120px);
+
+    z-index:-1;
+
+}
+
+/* ===========================
+   Header
+=========================== */
+
+.memory-header{
+
+    text-align:center;
+
+    padding:80px 20px 50px;
+
+    animation:fadeDown 1s ease;
+
+}
+
+.memory-header h1{
+
+    font-size:58px;
+
+    color:white;
+
+    font-weight:700;
+
+    text-shadow:0 5px 20px rgba(0,0,0,.25);
+
+}
+
+.memory-header p{
+
+    color:white;
+
+    margin-top:15px;
+
+    font-size:20px;
+
+    opacity:.95;
+
+}
+
+.back-btn{
+
+    display:inline-block;
+
+    margin-top:35px;
+
+    padding:14px 35px;
+
+    background:white;
+
+    color:#ff4d6d;
+
+    border-radius:40px;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.4s;
+
+}
+
+.back-btn:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 15px 35px rgba(0,0,0,.2);
+
+}
+
+/* ===========================
+   Gallery
+=========================== */
+
+.gallery{
+
+    width:1200px;
+
+    max-width:95%;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:35px;
+
+    padding-bottom:100px;
+
+}
+
+/* ===========================
+   Photo Card
+=========================== */
+
+.photo{
+
+    position:relative;
+
+    background:rgba(255,255,255,.28);
+
+    backdrop-filter:blur(18px);
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.12);
+
+    cursor:pointer;
+
+    transition:.45s;
+
+    animation:fadeUp .8s ease forwards;
+
+}
+
+/* Shine Effect */
+
+.photo::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:60%;
+
+    height:100%;
+
+    background:linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,.7),
+        transparent
+    );
+
+    transform:skewX(-25deg);
+
+    transition:1s;
+
+    z-index:5;
+
+}
+
+.photo:hover::before{
+
+    left:160%;
+
+}
+
+/* Image */
+
+.photo img{
+
+    width:100%;
+
+    height:340px;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:.6s;
+
+}
+
+/* Overlay */
+
+.photo::after{
+
+    content:"❤ View Memory";
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(255,77,109,.25);
+
+    color:white;
+
+    font-size:22px;
+
+    font-weight:600;
+
+    opacity:0;
+
+    transition:.4s;
+
+}
+
+.photo:hover::after{
+
+    opacity:1;
+
+}
+
+/* Hover */
+
+.photo:hover{
+
+    transform:
+        translateY(-15px)
+        rotate(-2deg)
+        scale(1.03);
+
+    box-shadow:0 30px 60px rgba(255,77,109,.35);
+
+}
+
+.photo:hover img{
+
+    transform:scale(1.12);
+
+}
+
+/* Caption */
+
+.photo span{
+
+    display:block;
+
+    padding:18px;
+
+    text-align:center;
+
+    color:#ff4d6d;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    background:white;
+
+}
+
+/* ===========================
+   Animation
+=========================== */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(50px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes fadeDown{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(-40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* Floating Animation */
+
+.photo{
+
+    animation:
+        fadeUp .8s ease,
+        floating 5s ease-in-out infinite;
+
+}
+
+.photo:nth-child(even){
+
+    animation-delay:.2s;
+
+}
+
+.photo:nth-child(3n){
+
+    animation-delay:.4s;
+
+}
+
+@keyframes floating{
+
+    0%{
+
+        transform:translateY(0px);
+
+    }
+
+    50%{
+
+        transform:translateY(-8px);
+
+    }
+
+    100%{
+
+        transform:translateY(0px);
+
+    }
+
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media(max-width:768px){
+
+.memory-header h1{
+
+font-size:38px;
+
+}
+
+.memory-header p{
+
+font-size:17px;
+
+}
+
+.photo img{
+
+height:280px;
+
+}
+
+.gallery{
+
+gap:20px;
+
+}
+
+}

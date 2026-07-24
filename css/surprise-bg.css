@@ -1,0 +1,351 @@
+/* =================================
+   Surprise Page Background Animation
+================================= */
+
+
+/* Animated Gradient Background */
+
+.surprise-page{
+
+    min-height:100vh;
+
+    position:relative;
+
+    overflow:hidden;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:
+    linear-gradient(
+        120deg,
+        #ff9a9e,
+        #fad0c4,
+        #ffdde1,
+        #ffc3a0
+    );
+
+    background-size:400% 400%;
+
+    animation:bgMove 12s ease infinite;
+
+}
+
+
+/* Background Moving */
+
+@keyframes bgMove{
+
+    0%{
+
+        background-position:0% 50%;
+
+    }
+
+    50%{
+
+        background-position:100% 50%;
+
+    }
+
+    100%{
+
+        background-position:0% 50%;
+
+    }
+
+}
+
+
+/* ===========================
+      Glow Circles
+=========================== */
+
+
+.surprise-page::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:450px;
+
+    height:450px;
+
+    background:#ffffff55;
+
+    border-radius:50%;
+
+    top:-150px;
+
+    left:-120px;
+
+    filter:blur(100px);
+
+    animation:glowMove 8s infinite alternate;
+
+}
+
+
+.surprise-page::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:400px;
+
+    height:400px;
+
+    background:#ff4d6d55;
+
+    border-radius:50%;
+
+    bottom:-120px;
+
+    right:-100px;
+
+    filter:blur(100px);
+
+    animation:glowMove 10s infinite alternate;
+
+}
+
+
+@keyframes glowMove{
+
+    from{
+
+        transform:translate(0,0);
+
+    }
+
+    to{
+
+        transform:translate(80px,-50px);
+
+    }
+
+}
+
+
+
+/* ===========================
+      Floating Hearts
+=========================== */
+
+
+.bg-hearts span{
+
+    position:absolute;
+
+    bottom:-50px;
+
+    font-size:25px;
+
+    animation:heartFloat linear infinite;
+
+    opacity:.8;
+
+}
+
+
+.bg-hearts span:nth-child(1){
+
+    left:10%;
+    animation-duration:9s;
+
+}
+
+
+.bg-hearts span:nth-child(2){
+
+    left:25%;
+    animation-duration:12s;
+
+}
+
+
+.bg-hearts span:nth-child(3){
+
+    left:40%;
+    animation-duration:8s;
+
+}
+
+
+.bg-hearts span:nth-child(4){
+
+    left:60%;
+    animation-duration:11s;
+
+}
+
+
+.bg-hearts span:nth-child(5){
+
+    left:80%;
+    animation-duration:10s;
+
+}
+
+
+
+@keyframes heartFloat{
+
+
+    0%{
+
+        transform:
+        translateY(0)
+        scale(.5)
+        rotate(0);
+
+        opacity:0;
+
+    }
+
+
+    20%{
+
+        opacity:1;
+
+    }
+
+
+    100%{
+
+        transform:
+        translateY(-120vh)
+        scale(1.5)
+        rotate(360deg);
+
+        opacity:0;
+
+    }
+
+}
+
+
+
+/* ===========================
+       Sparkle Stars
+=========================== */
+
+
+.sparkles span{
+
+    position:absolute;
+
+    width:6px;
+
+    height:6px;
+
+    background:white;
+
+    border-radius:50%;
+
+    box-shadow:
+    0 0 15px white,
+    0 0 30px white;
+
+
+    animation:twinkle 2s infinite;
+
+}
+
+
+
+@keyframes twinkle{
+
+
+    0%,100%{
+
+        opacity:.2;
+
+        transform:scale(.5);
+
+    }
+
+
+    50%{
+
+        opacity:1;
+
+        transform:scale(1.5);
+
+    }
+
+}
+
+
+
+/* ===========================
+       Surprise Card Animation
+=========================== */
+
+
+.surprise-card{
+
+    position:relative;
+
+    z-index:10;
+
+    animation:
+
+    cardShow 1.2s ease,
+
+    cardFloat 5s infinite ease-in-out;
+
+}
+
+
+
+@keyframes cardShow{
+
+
+    from{
+
+        opacity:0;
+
+        transform:
+        scale(.7)
+        translateY(80px);
+
+    }
+
+
+    to{
+
+        opacity:1;
+
+        transform:
+        scale(1)
+        translateY(0);
+
+    }
+
+}
+
+
+
+@keyframes cardFloat{
+
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+
+    50%{
+
+        transform:translateY(-15px);
+
+    }
+
+}

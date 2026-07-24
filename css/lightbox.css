@@ -1,0 +1,109 @@
+/* ===========================
+        Lightbox
+=========================== */
+
+.lightbox{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.95);
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:99999;
+
+    animation:fadeIn .4s;
+
+}
+
+.lightbox img{
+
+    width:80%;
+
+    max-width:900px;
+
+    max-height:85vh;
+
+    border-radius:20px;
+
+    box-shadow:0 0 40px rgba(255,255,255,.25);
+
+}
+
+.close{
+
+    position:absolute;
+
+    top:30px;
+
+    right:45px;
+
+    color:white;
+
+    font-size:50px;
+
+    cursor:pointer;
+
+}
+
+.prev,
+.next{
+
+    position:absolute;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    color:white;
+
+    font-size:60px;
+
+    cursor:pointer;
+
+    user-select:none;
+
+    transition:.3s;
+
+}
+
+.prev:hover,
+.next:hover{
+
+    color:#ff4d6d;
+
+}
+
+.prev{
+
+    left:40px;
+
+}
+
+.next{
+
+    right:40px;
+
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}

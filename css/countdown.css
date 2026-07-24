@@ -1,0 +1,113 @@
+/* ===========================
+   Birthday Countdown
+=========================== */
+
+.countdown-section{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:80px 20px;
+    background:linear-gradient(135deg,#ffb6c1,#ffe4ec);
+}
+
+.countdown-card{
+
+    width:100%;
+    max-width:900px;
+
+    background:rgba(255,255,255,.15);
+
+    backdrop-filter:blur(15px);
+
+    border-radius:30px;
+
+    padding:60px;
+
+    text-align:center;
+
+    color:white;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.2);
+
+}
+
+.countdown-card h2{
+
+    font-size:48px;
+
+    margin-bottom:15px;
+
+}
+
+.countdown-card p{
+
+    font-size:22px;
+
+    margin-bottom:50px;
+
+}
+
+.countdown{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:25px;
+
+    flex-wrap:wrap;
+
+}
+
+.time-box{
+
+    width:140px;
+
+    height:140px;
+
+    background:white;
+
+    border-radius:20px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+
+}
+
+.time-box h3{
+
+    font-size:48px;
+
+    color:#ff4d6d;
+
+}
+
+.time-box span{
+
+    margin-top:10px;
+
+    color:#666;
+
+    font-weight:600;
+
+}
+
+#birthdayMessage{
+
+    margin-top:50px;
+
+    font-size:32px;
+
+    color:white;
+
+    font-weight:bold;
+
+}

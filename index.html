@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Samia ❤️</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/loader.css">
+    <link rel="stylesheet" href="css/photo-ring.css">
+    <link rel="stylesheet" href="css/stars.css">
+    <link rel="stylesheet" href="css/glass.css">
+    <link rel="stylesheet" href="css/music.css">
+    <link rel="stylesheet" href="css/envelope.css">
+    <link rel="stylesheet" href="css/letter.css">
+    <link rel="stylesheet" href="css/countdown.css">
+    <link rel="stylesheet" href="css/gallery.css">
+    <link rel="stylesheet" href="css/lightbox.css">
+</head>
+
+<body>
+
+    <!-- Loader Section -->
+    <div id="loader">
+        <div class="loader-heart">❤️</div>
+        <div class="loader-text">
+            Preparing Your Surprise...
+        </div>
+    </div>
+
+    <!-- ===========================
+        Birthday Countdown
+    =========================== -->
+
+    <section class="countdown-section">
+
+        <div class="countdown-card">
+
+            <h2>🎂 Birthday Countdown</h2>
+
+            <p>Until Your Birthday ❤️</p>
+
+            <div class="countdown">
+
+                <div class="time-box">
+                    <h3 id="days">00</h3>
+                    <span>Days</span>
+                </div>
+
+                <div class="time-box">
+                    <h3 id="hours">00</h3>
+                    <span>Hours</span>
+                </div>
+
+                <div class="time-box">
+                    <h3 id="minutes">00</h3>
+                    <span>Minutes</span>
+                </div>
+
+                <div class="time-box">
+                    <h3 id="seconds">00</h3>
+                    <span>Seconds</span>
+                </div>
+
+            </div>
+
+            <div id="birthdayMessage"></div>
+
+        </div>
+
+    </section>
+
+    <!-- Background Stars -->
+    <div class="stars">
+        <span class="star" style="top:10%; left:15%;"></span>
+        <span class="star" style="top:20%; left:60%;"></span>
+        <span class="star" style="top:8%; left:80%;"></span>
+        <span class="star" style="top:35%; left:25%;"></span>
+        <span class="star" style="top:50%; left:75%;"></span>
+        <span class="star" style="top:65%; left:40%;"></span>
+        <span class="star" style="top:80%; left:20%;"></span>
+        <span class="star" style="top:75%; left:90%;"></span>
+        <span class="star" style="top:40%; left:10%;"></span>
+        <span class="star" style="top:15%; left:45%;"></span>
+        <span class="star" style="top:55%; left:55%;"></span>
+        <span class="star" style="top:90%; left:70%;"></span>
+    </div>
+
+    <!-- Floating Hearts & Balloons -->
+    <div class="hearts">
+        <span>❤️</span>
+        <span>🎈</span>
+        <span>💖</span>
+        <span>🎈</span>
+        <span>💕</span>
+        <span>🎈</span>
+        <span>❤️</span>
+        <span>🎈</span>
+        <span>💝</span>
+        <span>🎈</span>
+        <span>💗</span>
+        <span>🎈</span>
+    </div>
+
+    <!-- Main Hero Content -->
+    <div class="container">
+        <div class="hero-text">
+            <h1>Happy Birthday ❤️</h1>
+            <p>To My Dearest Samia</p>
+            <a href="#letter" class="btn">Open Your Surprise 🎁</a>
+            <a href="memories.html" class="btn" style="margin-left:12px;">Memories</a>
+        </div>
+
+        <div class="hero-image">
+            <img src="images/samia.png" alt="Samia">
+        </div>
+    </div>
+
+    <!-- Envelope -->
+    <section id="envelopeSection" class="envelope-section">
+
+        <button id="envelopeBackBtn" class="surprise-back" title="Back" style="position:fixed;left:18px;top:18px;z-index:60;border-radius:8px;border:none;padding:10px 12px;background:rgba(255,255,255,0.95);box-shadow:0 6px 18px rgba(0,0,0,0.12);cursor:pointer;">← Back</button>
+
+        <div class="envelope">
+
+            <div class="top"></div>
+
+            <div class="letter-paper">
+
+                <h2>💌</h2>
+
+                <p>Open Me</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Love Letter Section -->
+    <section id="letter" class="letter-section">
+        <button id="letterBackBtn" class="surprise-back" title="Back" style="position:fixed;left:18px;top:18px;z-index:60;border-radius:8px;border:none;padding:10px 12px;background:rgba(255,255,255,0.95);box-shadow:0 6px 18px rgba(0,0,0,0.12);cursor:pointer;">← Back</button>
+
+        <div class="letter-card">
+            <h2>💌 A Letter For You 💌</h2>
+
+            <p id="typingText"></p>
+
+        </div>
+    </section>
+
+    
+
+    <!-- JavaScript Files -->
+    <!-- Background music (plays softly, loops). If autoplay is blocked, click anywhere or use the button to start. -->
+    <audio id="bgMusic" src="music/birthday.mp3" loop preload="auto" playsinline></audio>
+
+    <!-- Music control button (small, unobtrusive) -->
+    <button id="musicBtn" class="music-btn" aria-label="Toggle background music" title="Play/Pause music">🎵</button>
+    <script src="js/loader.js"></script>
+    <script src="script.js"></script>
+    <script src="js/music.js"></script>
+    <script src="js/surprise.js"></script>
+    <script src="js/countdown.js"></script>
+    <script src="js/typing.js"></script>
+    <script src="js/lightbox.js"></script>
+
+</body>
+
+</html>

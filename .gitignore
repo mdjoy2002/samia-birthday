@@ -1,0 +1,16 @@
+# Node / temp
+node_modules/
+.vscode/
+.DS_Store
+*.log
+
+# Build / output
+dist/
+build/
+
+# Media (optional: keep small ones, ignore large raw files)
+music/*.mp3
+images/memories/*.jpg
+
+# OS files
+Thumbs.db
